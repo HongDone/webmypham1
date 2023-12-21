@@ -1,0 +1,482 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.sidebar {
+    position: fixed;
+    height: 100%;
+    width: 260px;
+    background: #FFD1C6;
+    padding: 15px;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 25px;
+    padding: 0 15px;
+}
+
+.sidebar a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.menu-content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin-top: 40px;
+    overflow-y: scroll;
+}
+
+.menu-content::-webkit-scrollbar {
+    display: none;
+}
+
+.menu-items {
+    height: 100%;
+    width: 100%;
+    list-style: none;
+    transition: all 0.4s ease;
+}
+
+.item a,
+.submenu-item {
+    padding: 16px;
+    display: inline-block;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.item i {
+    font-size: 12px;
+}
+
+.item a:hover,
+.submenu-item:hover,
+.submenu .menu-title:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.submenu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000000;
+    cursor: pointer;
+}
+
+.submenu {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: calc(-100% - 26px);
+    height: calc(100% + 100vh);
+    background: #FFD1C6;
+    display: none;
+}
+
+.addproducttype-form {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #000000;
+    display: none;
+    z-index: 999;
+}
+
+.adduser-form {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #000000;
+    display: none;
+    z-index: 999;
+}
+
+.addproducttype-form-content {
+    width: 600px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.adduser-form-content {
+    width: 600px;
+    height: 320px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+
+.addproducttype-form-content form {
+    padding: 0 40px;
+}
+
+.adduser-form-content form {
+    padding: 0 40px;
+}
+
+.addproducttype-form-content h2 {
+    font-size: 16px;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+.adduser-form-content h2 {
+    font-size: 16px;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+
+.addproducttype-form-content h2 span {
+    display: block;
+    font-size: 13px;
+    position: absolute;
+    height: 30px;
+    border: 1px solid #ddd;
+    right: 40px;
+    cursor: pointer;
+    top: 20%;
+    transform: translateY (-50%);
+    line-height: 30px;
+    color: #333;
+    border-radius: 5px;
+}
+
+.adduser-form-content h2 span {
+    display: block;
+    font-size: 13px;
+    position: absolute;
+    height: 30px;
+    border: 1px solid #ddd;
+    right: 40px;
+    cursor: pointer;
+    top: 20%;
+    transform: translateY (-50%);
+    line-height: 30px;
+    color: #333;
+    border-radius: 5px;
+}
+
+.addproducttype-form-content form input {
+    height: 40px;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    padding: 6px;
+    border-radius: 5px;
+}
+
+.adduser-form-content form input {
+    height: 40px;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    padding: 6px;
+    border-radius: 5px;
+}
+
+
+.addproducttype-form-content form button {
+    margin-top: 5px;
+    height: 30px;
+    width: 15%;
+    cursor: pointer;
+    background-color: red;
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.addproducttype-form-content form .buttons .cancel-btn {
+    background-color: white;
+    color: red;
+    border: 1px solid #aaa8a8;
+
+}
+
+.addproducttype-form-content form .buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.addproducttype-form-content form .buttons button {
+    margin-left: 10px;
+}
+
+.adduser-form-content form button {
+    margin-top: 20px;
+    height: 30px;
+    width: 15%;
+    cursor: pointer;
+    background-color: red;
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.adduser-form-content form .buttons .cancel-btn {
+    background-color: white;
+    color: red;
+    border: 1px solid #aaa8a8;
+
+}
+
+.adduser-form-content form .buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.adduser-form-content form .buttons button {
+    margin-left: 10px;
+}
+
+.container2 {
+    width: 96%;
+    padding-bottom: 10vh;
+}
+
+.orderinfo h2 span {
+    display: block;
+    font-size: 14px;
+    position: absolute;
+    height: 30px;
+    border: 1px solid #ddd;
+    right: 40px;
+    cursor: pointer;
+    top: 15%;
+    transform: translateY (-50%);
+    line-height: 30px;
+    color: #333;
+    border-radius: 5px;
+}
+
+.navbar,
+.main {
+    left: 260px;
+    width: calc(100% - 260px);
+    transition: all 0.5s ease;
+    z-index: 1000;
+}
+
+.sidebar.close~.navbar,
+.sidebar.close~.main {
+    left: 0;
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    color: #fff;
+    padding: 15px 20px;
+    font-size: 25px;
+    background: #858484;
+    height: 80px;
+}
+
+.navbar .admin-control {
+    position: relative;
+    font-size: 12pt;
+    display: flex;
+}
+
+.fa-user-circle {
+    cursor: pointer;
+    font-size: 18pt;
+    margin-left: 20px;
+}
+
+.admin-action {
+    position: absolute;
+    background-color: #ffffff;
+    color: #000000;
+    margin-left: -165px;
+    margin-top: 25px;
+    width: 200px;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    list-style: none;
+    text-align: left;
+    visibility: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.admin-action li {
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.admin-action li:hover {
+    transition: all 0.3s ease-in-out;
+    background-color: #FFC6D1;
+}
+
+.navbar #sidebar-close {
+    cursor: pointer;
+}
+
+.main {
+    position: relative;
+    display: flex;
+    padding-left: 30px;
+    padding-top: 100px;
+    z-index: 100;
+    background: #ffffff;
+}
+
+.pagination-container {
+    height: 80px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 3%;
+}
+
+.showing-status {
+    margin-top: 40px;
+    width: 30%;
+}
+
+.pagination-nav {
+    display: flex;
+    list-style: none;
+    margin-top: 40px;
+}
+
+.pagination-nav .page-item {
+    text-align: center;
+    height: 40px;
+    line-height: 2.5;
+    border-radius: 5px;
+    width: 60px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.control-button {
+    text-align: center;
+    height: 40px;
+    line-height: 2.5;
+    border-radius: 5px;
+    width: 80px;
+}
+
+.control-button a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.actived {
+    pointer-events: none;
+    background-color: #FFC6D1;
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+.pagination-nav .page-item:hover,
+.control-button:hover {
+    cursor: pointer;
+    background-color: #FFC6D1;
+    transition-duration: 0.4s;
+}
+
+.pagination-nav .page-item a {
+    text-decoration: none;
+    color: black;
+}
+
+.stripped-row {
+    background-color: #f8f1f1;
+}
+
+.view-and-search {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    height: 5vh;
+}
+
+.view-number {
+    width: 40%;
+}
+
+#number-show {
+    text-align: center;
+    cursor: pointer;
+    width: 35%;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 12pt;
+}
+
+.search-box {
+    text-align: right;
+    width: 60%;
+}
+
+.search-box span {
+    margin-right: 10px;
+}
+
+.search-term {
+    height: 30px;
+    padding-left: 14px;
+    width: 40%;
+    font-size: 12.5pt;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.table-container {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.sorting {
+    color: gray;
+    cursor: pointer;
+    margin-left: 4px;
+}
+
+.toggle-actived {
+    color: black;
+}
